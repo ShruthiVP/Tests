@@ -1,1 +1,1 @@
-Buildbot creation for tet purpose
+Buildbot creation for test purpose
