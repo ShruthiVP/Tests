@@ -16,7 +16,7 @@ class TestHello(unittest.TestCase):
         self.assertEqual(hello(u'world'), u'hello world')
 
 
-class TestHello(unittest.TestCase):
+class Testworld(unittest.TestCase):
 
     def test_hello(self):
         """sample test hello"""
