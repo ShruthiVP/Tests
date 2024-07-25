@@ -12,7 +12,7 @@ import pytest_check as check
 #import allure
 
 #from tests.lora_commands.commands import Bandwidth, CodingRate, SpreadingFactor
-from tests.lorawan_commands.commands import Cmd, CmdRtrn, SendBytes
+from commands import Cmd, CmdRtrn, SendBytes
 
 ######################
 ## GLOBAL VARIABLES ##
