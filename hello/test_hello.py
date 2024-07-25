@@ -11,10 +11,13 @@ class TestHello(unittest.TestCase):
         """sample test"""
         self.assertEqual(hello('world'), 'hello world')
 
-    def test_hello(self):
-        """sample test hello"""
-        self.assertEqual(hello('hello'), 'hello hello')
-
     def test_world_unicode(self):
         """sample test with unicode"""
         self.assertEqual(hello(u'world'), u'hello world')
+
+
+class TestHello(unittest.TestCase):
+
+    def test_hello(self):
+        """sample test hello"""
+        self.assertEqual(hello('hello'), 'hello hello')
