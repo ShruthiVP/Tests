@@ -81,8 +81,8 @@ def set_parser_mode(device, current_mode, target_mode):
             device.read_response()
 
 
-class TestLorawanCommands(pytest.TestCase):
-
+class TestLorawanCommands(pytest):
+    @pytest.fixture
     def devices(self, config_data, results_filepath):
         dev1 = Device("1", config_data['device1']['port'], config_data['device1']['baudrate'],
                       results_filepath=results_filepath)
@@ -92,15 +92,15 @@ class TestLorawanCommands(pytest.TestCase):
         dev2.identify()
         return dev1, dev2
 
-
+    @pytest.fixture
     def device1(self, devices):
         return devices[0]
 
-
+    @pytest.fixture
     def device2(self, devices):
         return devices[1]
 
-
+    @pytest.fixture(autouse=True)
     def parser(self, parser_mode):
         Cmd.mode = "ascii"
 
@@ -110,7 +110,7 @@ class TestLorawanCommands(pytest.TestCase):
 
         return _parser
 
-
+    @pytest.fixture(autouse=True)
     def wake_devices(self, device1, parser):
         device1.send_receive(WakeUp())
         device1.send_receive(WakeUp())
@@ -124,6 +124,7 @@ class TestLorawanCommands(pytest.TestCase):
         config_mode = parser()
         set_parser_mode(device1, detect_parser_mode(device1), config_mode)
 
+    @pytest.fixture(autouse=True)
     def prepare_stack(self, wake_devices, device1):
         device1.send_receive(Lorawan())
         device1.send_receive(Stack("lorawan"))
