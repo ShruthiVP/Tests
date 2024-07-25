@@ -81,7 +81,7 @@ def set_parser_mode(device, current_mode, target_mode):
             device.read_response()
 
 
-class TestLorawanCommands(unittest.TestCase):
+class TestLorawanCommands(pytest.TestCase):
 
     def devices(self, config_data, results_filepath):
         dev1 = Device("1", config_data['device1']['port'], config_data['device1']['baudrate'],
