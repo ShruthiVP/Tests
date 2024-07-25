@@ -8,9 +8,9 @@ import logging
 
 import pytest
 
-from test_executor import Device
+from hello.test_executor import Device
 #add Gevent command
-from commands import Cmd, SendBytes, Lorawan, Stack, Ping, Sevent, Sconfirm, Confirm, Devid, \
+from hello.commands import Cmd, SendBytes, Lorawan, Stack, Ping, Sevent, Sconfirm, Confirm, Devid, \
     Sappeui, Gappeui, Sappkey, Gappkey, Sotaa, Gotaa, Lwjoin, Lwjoinbin, WakeUp, SetParser, Lwstatus, Sappskey, Gappskey, \
         Snwkskey, Gnwkskey, Sdevaddr, Gdevaddr, Lwjoinbinabp
 

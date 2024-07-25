@@ -1,6 +1,7 @@
 # Test executor script - Uses Python 3.5.3 or later
 # Input is the text file with test commands to be send to
 # connected devices and the serial ports of the devices.
+
 import logging
 import time
 import sys
@@ -12,7 +13,7 @@ import pytest_check as check
 #import allure
 
 #from tests.lora_commands.commands import Bandwidth, CodingRate, SpreadingFactor
-from commands import Cmd, CmdRtrn, SendBytes
+from hello.commands import Cmd, CmdRtrn, SendBytes
 
 ######################
 ## GLOBAL VARIABLES ##
