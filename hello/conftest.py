@@ -4,7 +4,7 @@ import logging
 import time
 from pathlib import Path
 
-import allure
+#import allure
 import numpy as np
 import pandas as pd
 import pytest
