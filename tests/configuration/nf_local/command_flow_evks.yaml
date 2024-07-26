@@ -1,9 +1,9 @@
 device1: &id001
-  port: COM12
+  port: /dev/ttyS11
   baudrate: 115200
 
 device2: &id002
-  port: COM9
+  port: /dev/ttyS8
   baudrate: 115200
 
 lora_device_1: *id001
