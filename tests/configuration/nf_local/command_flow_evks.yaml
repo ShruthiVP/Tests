@@ -1,0 +1,11 @@
+device1: &id001
+  port: COM12
+  baudrate: 115200
+
+device2: &id002
+  port: COM9
+  baudrate: 115200
+
+lora_device_1: *id001
+
+lora_device_2: *id002
