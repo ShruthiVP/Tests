@@ -1,9 +1,9 @@
 device1: &id001
-  port: /dev/ttyS11
+  port: /dev/ttyUSB0
   baudrate: 115200
 
 device2: &id002
-  port: /dev/ttyS8
+  port: /dev/ttyUSB1
   baudrate: 115200
 
 lora_device_1: *id001
